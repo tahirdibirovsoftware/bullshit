@@ -4,11 +4,11 @@
 This is multiline bullshit
 ]]
 
-local some_variable = "Fuck it!!";
-name = "Alice "
-surname = "Smith"
-fullname = name .. surname
-local multiline_string  = [[Tahir 
+local some_variable    = "Fuck it!!";
+name                   = "Alice "
+surname                = "Smith"
+fullname               = name .. surname
+local multiline_string = [[Tahir
 Dibirov]]
 print(multiline_string)
 
@@ -24,7 +24,7 @@ print(tostring(some_fuckin_number))
     Fuckin tables here:
 ]]
 
-local foods = {"Apple", "Cherry"}
+local foods = { "Apple", "Cherry" }
 print(type(foods))
 print("Memory address of table: ", foods)
 print(foods[1])
@@ -41,7 +41,7 @@ print(type(food))
 
 print(#foods)
 
-local data = {name="Tahir", surname="Dibirov"}
+local data = { name = "Tahir", surname = "Dibirov" }
 print(data.name)
 
 
@@ -51,15 +51,15 @@ math.randomseed(3)
 print(math.random())
 
 -- Min and Fuckin Max
-local max = math.max(1,2,34,5,6)
-local min = math.min(0,5,4,3,5)
+local max = math.max(1, 2, 34, 5, 6)
+local min = math.min(0, 5, 4, 3, 5)
 print(max, "-", min)
 
 -- length of strings
 local fullname = "Alice Baker"
 print(fullname.sub(fullname, 3))
 -- find by patter
-print(fullname.find(fullname,"li"))
+print(fullname.find(fullname, "li"))
 
 --Fuckin Scope more detailed
 do
@@ -68,37 +68,52 @@ do
     print(fuckin_variable)
     print(fuckin_local_variable)
 end
-    print("This shit works here: ", fuckin_variable)
-    print("This shit won't work here: ", fuckin_local_variable)
+print("This shit works here: ", fuckin_variable)
+print("This shit won't work here: ", fuckin_local_variable)
 
 
 -- Motherfuckin functions
 
-    function doStuff()
-        print("This function has been invoked!")
+function doStuff()
+    print("This function has been invoked!")
+end
+
+doStuff()
+
+
+do
+    function Global_one()
+        print("This is fuckin global function with uppercase")
+        return "Shit"
     end
 
-    doStuff()
+    Global_one()
 
 
-    do
-        function Global_one()
-            print("This is fuckin global function with uppercase")
-            return "Shit"
-        end
-
-        Global_one()
-
-
-        local function local_motherfucker()
-            print("This motherfucker is local can't be invoked outside the scope")
-            return "Fuck it again!"
-        end
-        
-        local_motherfucker()
-        print(local_motherfucker())
-
+    local function local_motherfucker()
+        print("This motherfucker is local can't be invoked outside the scope")
+        return "Fuck it again!"
     end
 
-    print("So it can be invoked outside of the scope", Global_one())
-    -- print("Fuck: ", local_motherfucker())
+    local_motherfucker()
+    print(local_motherfucker())
+end
+
+print("So it can be invoked outside of the scope", Global_one())
+-- print("Fuck: ", local_motherfucker())
+
+-- This  shit is interesting!
+
+function Outer_func()
+    function Inner_func()
+        return "Inner function has been invoked!"
+    end
+
+    Inner_func()
+end
+
+-- Like I can invoked the inner function outside the outer function if the first one not declared as local
+Outer_func() -- Only if you call outer function then the inner function will be invoked
+-- inside it never executed, and so Inner_func was never created.
+-- In Lua, function definitions are just runtime assignments, not hoisted declarations.
+print(Inner_func()) -- you can't access it if it declared as local function inside the outer
