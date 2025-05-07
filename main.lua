@@ -19,3 +19,23 @@ end
 
 some_fuckin_number = 56
 print(tostring(some_fuckin_number))
+
+--[[
+    Fuckin tables here:
+]]
+
+local foods = {"Apple", "Cherry"}
+print(type(foods))
+print("Memory address of table: ", foods)
+print(foods[1])
+
+--[[
+    Length
+]]
+
+
+local food = "Apples"
+print(#food)
+-- length of table
+
+print(#foods)
