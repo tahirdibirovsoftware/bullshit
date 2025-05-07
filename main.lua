@@ -43,3 +43,9 @@ print(#foods)
 
 local data = {name="Tahir", surname="Dibirov"}
 print(data.name)
+
+
+--Random shit!
+math.randomseed(3)
+--Always generates the same shit!
+print(math.random())
