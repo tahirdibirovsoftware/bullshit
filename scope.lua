@@ -2,7 +2,9 @@ local some_variable = "Fuck it!!";
 name = "Alice "
 surname = "Smith"
 fullname = name .. surname
-print(fullname)
+local multiline_string  = [[Tahir 
+Dibirov]]
+print(multiline_string)
 
 do
     local variable = "Fuck it in self-made scope!"
