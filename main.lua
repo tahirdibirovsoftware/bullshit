@@ -54,3 +54,19 @@ print(math.random())
 local max = math.max(1,2,34,5,6)
 local min = math.min(0,5,4,3,5)
 print(max, "-", min)
+
+-- length of strings
+local fullname = "Alice Baker"
+print(fullname.sub(fullname, 3))
+-- find by patter
+print(fullname.find(fullname,"li"))
+
+--Fuckin Scope more detailed
+do
+    local fuckin_local_variable = "Local Shit!"
+    fuckin_variable = "Global Shit!"
+    print(fuckin_variable)
+    print(fuckin_local_variable)
+end
+    print("This shit works here: ", fuckin_variable)
+    print("This shit won't work here: ", fuckin_local_variable)
