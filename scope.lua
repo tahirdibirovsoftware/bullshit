@@ -1,3 +1,5 @@
+-- This is bullshit!
+
 local some_variable = "Fuck it!!";
 name = "Alice "
 surname = "Smith"
