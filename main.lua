@@ -70,3 +70,35 @@ do
 end
     print("This shit works here: ", fuckin_variable)
     print("This shit won't work here: ", fuckin_local_variable)
+
+
+-- Motherfuckin functions
+
+    function doStuff()
+        print("This function has been invoked!")
+    end
+
+    doStuff()
+
+
+    do
+        function Global_one()
+            print("This is fuckin global function with uppercase")
+            return "Shit"
+        end
+
+        Global_one()
+
+
+        local function local_motherfucker()
+            print("This motherfucker is local can't be invoked outside the scope")
+            return "Fuck it again!"
+        end
+        
+        local_motherfucker()
+        print(local_motherfucker())
+
+    end
+
+    print("So it can be invoked outside of the scope", Global_one())
+    -- print("Fuck: ", local_motherfucker())
