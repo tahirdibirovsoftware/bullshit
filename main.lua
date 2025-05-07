@@ -49,3 +49,8 @@ print(data.name)
 math.randomseed(3)
 --Always generates the same shit!
 print(math.random())
+
+-- Min and Fuckin Max
+local max = math.max(1,2,34,5,6)
+local min = math.min(0,5,4,3,5)
+print(max, "-", min)
