@@ -1,4 +1,8 @@
--- This is bullshit!
+-- This is singleline bullshit!
+
+--[[
+This is multiline bullshit
+]]
 
 local some_variable = "Fuck it!!";
 name = "Alice "
