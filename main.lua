@@ -36,6 +36,10 @@ print(foods[1])
 
 local food = "Apples"
 print(#food)
+print(type(food))
 -- length of table
 
 print(#foods)
+
+local data = {name="Tahir", surname="Dibirov"}
+print(data.name)
